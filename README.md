@@ -9,6 +9,7 @@ REST API para gestión de empleados desarrollada con Spring Boot 3.
 - H2 Database (en memoria)
 - Swagger / OpenAPI 3
 - JUnit 5 + Mockito
+- Docker
 
 ## Endpoints principales
 
@@ -22,7 +23,7 @@ REST API para gestión de empleados desarrollada con Spring Boot 3.
 | GET | /api/v1/empleados/buscar?termino= | Buscar por nombre |
 | GET | /api/v1/empleados/estado/{estado} | Filtrar por estado |
 
-## Cómo ejecutar
+## Cómo ejecutar localmente
 
 ```bash
 ./mvnw spring-boot:run
@@ -30,10 +31,18 @@ REST API para gestión de empleados desarrollada con Spring Boot 3.
 
 Swagger UI disponible en: http://localhost:8080/swagger-ui.html
 
+## Cómo ejecutar con Docker
+
+```bash
+docker-compose up --build
+```
+
+La aplicación estará disponible en: http://localhost:8080
+
 ## Pruebas
 
 ```bash
 ./mvnw test
 ```
 
-5 pruebas unitarias con JUnit 5 y Mockito.
+5 pruebas unitarias con JUnit 5 y Mockito. JUnit 5 y Mockito.
