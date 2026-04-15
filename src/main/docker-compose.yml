@@ -8,3 +8,11 @@ services:
       - "8080:8080"
     environment:
       - SPRING_PROFILES_ACTIVE=default
+      - SPRING_DATASOURCE_URL=jdbc:h2:mem:employeedb
+      - SPRING_H2_CONSOLE_ENABLED=true
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q",
+             "http://localhost:8080/api/v1/empleados"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
