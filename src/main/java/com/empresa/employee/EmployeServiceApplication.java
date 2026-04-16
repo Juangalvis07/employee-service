@@ -10,6 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories(basePackages = "com.empresa.employee.repository")
 public class EmployeServiceApplication {
     public static void main(String[] args) {
+        System.setProperty("spring.profiles.active", "oracle");
         SpringApplication.run(EmployeServiceApplication.class, args);
     }
 }
